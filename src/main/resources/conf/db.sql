@@ -1,0 +1,37 @@
+DROP TABLE  users if EXISTS users;
+CREATE TABLE IF NOT EXISTS users(
+	id INTEGER PRIMARY KEY AUTO_INCREMENT  PRIMARY KEY,
+	uname VARCHAR(255),
+	pwd VARCHAR(255),
+	role INTEGER,
+	ADDTIME BIGINT,
+	lastUpdateTime BIGINT,
+	lastLoginTime BIGINT
+)
+/**
+ * UNIX_TIMESTAMP(NOW()) 是秒数，需要转化成毫秒
+ */
+INSERT INTO users VALUES(NULL, 'admin', 'iipopp', 0 , UNIX_TIMESTAMP(NOW())*1000, NULL, NULL);
+
+
+CREATE TABLE IF NOT EXISTS topic(
+	id INTEGER PRIMARY KEY AUTO_INCREMENT  PRIMARY KEY,
+	title VARCHAR(20),
+	content VARCHAR(255),
+	addTime BIGINT,
+	updateTime BIGINT,
+	uid INTEGER,
+	uname VARCHAR(20)
+)
+drop table if EXISTS reply;
+CREATE TABLE IF NOT EXISTS reply(
+	id INTEGER PRIMARY KEY AUTO_INCREMENT  PRIMARY KEY,
+	tid INTEGER,
+	content VARCHAR(255),
+	addTime BIGINT,
+	uid INTEGER,
+	uname VARCHAR(20),
+	energy INTEGER,
+	score INTEGER
+)
+

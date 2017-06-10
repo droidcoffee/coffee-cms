@@ -1,0 +1,187 @@
+@charset "utf-8";
+/* CSS Document */
+html,body,div{
+	margin:0px;
+	padding:0px;
+}
+body{
+	background-color:#DDF3F7;
+}
+.bodyer{
+	width:970px;
+	height:auto;
+	margin:auto;
+	border:1px #09F solid;
+	background-color:#FFF;
+}
+.top{
+	width:100%;
+	height:325px;
+	border-top:3px #719bb4 solid;
+}
+.top_left{
+	width:480px;
+	height:auto;
+	float:left;
+}
+.top_right{
+	width:454px;
+	height:auto;
+	float:left;
+}
+.top_t1{
+	font-size:36px;
+	color:#000;
+	font-family:"黑体";
+	padding-bottom:10px;
+}
+.top_t2{
+	font-size:24px;
+	color:#000;
+	font-family:"楷体";
+	line-height:40px;
+}
+.top_t3{
+	font-size:18px;
+	color:#000;
+	font-family:"楷体";
+	line-height:25px;
+}
+.span_num{
+	font-size:36px;
+	font-weight:bold;
+	color:#FC0;
+}
+.chong a{
+	font-size:36px;
+	font-weight:bold;
+	color:#F00;
+}
+.chong a:hover{
+	font-size:36px;
+	font-weight:bold;
+	color:#F90;
+}
+
+
+
+
+.ti{
+	height:auto;
+	clear:both;
+	border:#3888ff 4px solid;
+	border-left:0px;
+	border-right:0px;
+}
+#s{
+	font-size:80px;
+	color:#FFF;
+	background-image:url(images/s.jpg);
+	height:203px;
+	line-height:203px;
+	width:203px;
+	text-align:center;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.ti_con{
+	line-height:40px;
+	font-size:30px;
+	color:#30F;
+	font-family:"楷体";
+}
+
+
+.da{
+	width:100%;
+	height:202px;
+	background-image:url(images/dabg.jpg);
+	background-repeat:repeat-x;
+}
+
+.content{
+	width:420px;
+	height:180px;
+	font-size:30px;
+	line-height:30px;
+	margin-left:14px;
+}
+.ck{
+	font-size:54px;
+	color:#fbe31d;
+}
+.bt{
+	background-color:#FFF;
+	margin:10px;
+}
+
+
+.list_con{
+	width:100%;
+	height:auto!important;
+	min-height:75px;
+	height:75px;
+	background-repeat:no-repeat;
+}
+.list{
+	width:100%;
+	padding-top:0px;
+	border-bottom:1px #999 dotted;
+	margin-top:10px;
+}
+
+.fee{
+	font-size:36px;
+	color:#F00;
+	font-weight:bold;
+	background-color:#FF0;
+	
+}
+.zi1{
+	font-size:36px;
+	color:green;
+	font-weight:bold;
+	line-height:40px;
+	height:auto!important;
+	min-height:80px;
+	height:80px;
+}
+.nn1{
+	width:271px;
+	height:118px;
+	line-height:138px;
+	overflow:hidden;
+	text-align:center;
+	background-repeat:no-repeat;
+	font-size:38px;
+	color:#F00;
+}
+
+.list_title{
+	height:75px;
+	width:100%;
+}
+.list_title a{
+	display:inline-block;
+	width:208px;
+	height:57px;
+	margin-top:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

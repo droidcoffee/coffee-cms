@@ -1,0 +1,81 @@
+#main {
+	width: 760px; height: 580px; margin: 0px auto;
+	background-image: url("img/bg.png");
+}
+
+#top_div_1 {
+	float: left; position: relative; top: 0px; right: 0px; width: 340px;
+	height: 127px; background-image: url('img/title_logo.png');
+}
+
+#top_div_2 {
+	float: right; position: relative; top: 20px; right: 0px; left: -15px;
+	width: 260px; height: 99px;
+	background-image: url('img/title_right_bg.png');
+}
+
+#top_div_3 {
+	position: relative; top: 0px;
+}
+
+#center_left_1 {
+	width: 395px; height: 310px; position: relative; left: 10px;
+	background-image: url('img/topic_bg.png'); left: 10px;
+}
+
+#center_left_4 {
+	position: relative; top: 60px; text-align: center; color: white;
+}
+
+#main_reply {
+	position: relative; float: right; top: -415px; left: -10px;
+	padding-top: 50px; padding-left: 10px; height: 360px; width: 335px;
+	background-image: url('img/center_right_bg.png');
+}
+
+#main_reply img {
+	vertical-align: middle;
+}
+
+#main_reply_me {
+	height: 80px; width: 335px; overflow: hidden;
+}
+
+#main_reply_other {
+	position: relative; top: 0px; height: 260px; width: 335px;
+	overflow: auto;
+}
+
+#ds_time_remain {
+	float: right; position: relative; height: 127px; right: 60px;
+	font-size: 60px; top: 30px; color: white; text-align: center;
+}
+
+#ds_topic_content {
+	position: relative; top: 55px; left: 15px; color: white; width: 360px;
+	height: 75px; overflow: hidden;
+}
+
+#ds_topic_answer {
+	position: relative; top: 80px; left: 15px; color: white;
+}
+
+#ds_topic_answer textarea {
+	width: 355px; height: 50px; border: 0px; background-color: transparent;
+	color: white;
+}
+
+#ds_answer_item {
+	position: relative; width: 230px; padding-left: 10px;
+	padding-right: 7px; word-wrap: break-word; word-break: break-all;
+	background-image: url('img/answer_bg_center.png'); width: 230px;
+}
+
+#ds_topic_btn {
+	position: relative; top: 80px; left: 10px; height: 83px;
+	line-height: 83px;
+}
+
+#ds_topic_btn img {
+	vertical-align: middle; margin-right: 5px;
+}

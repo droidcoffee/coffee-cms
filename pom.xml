@@ -1,0 +1,167 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.shouhuobao</groupId>
+	<artifactId>guoer-app</artifactId>
+	<version>1.0.0</version>
+	<packaging>war</packaging>
+	<properties>
+		<!-- 主要依赖库的版本定义 -->
+		<java.version>1.8</java.version>
+		<quartz.version>2.2.3</quartz.version>
+		<jdbc.driver.version>5.1.22</jdbc.driver.version>
+		<druid.version>1.0.9</druid.version>
+		<jackson.version>2.3.3</jackson.version>
+		<commons-lang3.version>3.1</commons-lang3.version>
+		<maven-resources-plugin.version>2.5</maven-resources-plugin.version>
+		<jetty.version>9.4.2.v20170220</jetty.version>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>nexus_public</id>
+			<name>nexus repository</name>
+			<url>http://60.205.149.41:8081/nexus/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>nexus_public</id>
+			<name>nexus repository</name>
+			<url>http://60.205.149.41:8081/nexus/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<layout>default</layout>
+		</pluginRepository>
+	</pluginRepositories>
+	<dependencies>
+		<dependency>
+			<groupId>com.shouhuobao</groupId>
+			<artifactId>guoer-base</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.3.2</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${jdbc.driver.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>${druid.version}</version>
+		</dependency>
+		<!-- 语音验证包 -->
+		<dependency>
+			<groupId>com.shouhuobao</groupId>
+			<artifactId>cloopen</artifactId>
+			<version>2.6</version>
+		</dependency>
+		<!-- 语音验证包结束 -->
+		<dependency>
+			<groupId>com.dbay.apns4j</groupId>
+			<artifactId>dbay-apns4j</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<!-- poi -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.11</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-examples</artifactId>
+			<version>3.11</version>
+		</dependency>
+		<!-- poi 结束 -->
+	</dependencies>
+	<build>
+		<finalName>guoer-appserv</finalName>
+		<plugins>
+			<!-- compiler插件, 设定JDK版本 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<showWarnings>true</showWarnings>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.7</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<outputDirectory></outputDirectory>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<!-- 打war包的时候不打maven相关的jar -->
+					<packagingExcludes>**/maven*.jar</packagingExcludes>
+				</configuration>
+			</plugin>
+			<!-- 发布插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.8.2</version>
+			</plugin>
+			<!-- jetty插件, 设定context path与spring profile -->
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>${jetty.version}</version>
+				<configuration>
+					<scanIntervalSeconds>2000</scanIntervalSeconds>
+					<webAppConfig>
+						<contextPath>/admin</contextPath>
+					</webAppConfig>
+					<httpConnector>
+						<port>8082</port>
+					</httpConnector>
+				</configuration>
+			</plugin>
+		</plugins>
+		<defaultGoal>compile</defaultGoal>
+	</build>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<url>http://60.205.149.41:8081/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+		<repository>
+			<id>nexus-releases</id>
+			<url>http://60.205.149.41:8081/nexus/content/repositories/releases/</url>
+		</repository>
+	</distributionManagement>
+</project>
