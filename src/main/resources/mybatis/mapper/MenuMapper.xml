@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cms.mapper.MenuMapper">
+
+	<select id="queryMenus" resultType="com.cms.controller.bean.MenuBean">
+		SELECT m.id, m.`name`, m.`action`,m.`parent` 
+		FROM t_menu_user mu LEFT JOIN t_menu m ON mu.`nemuId` = m.`id` WHERE mu.`userId` = #{userId}
+	</select>
+ 
+</mapper>

@@ -17,20 +17,17 @@
 	<description>Spring公共配置</description>
 
 	<context:component-scan base-package="com.shouhuobao.app" />
-	<context:component-scan base-package="com.shouhuobao.service" />
-	<context:component-scan base-package="com.shouhuobao.mapper" />
-	<context:component-scan base-package="com.shouhuobao.job" />
-	<context:component-scan base-package="com.shouhuobao.guoer.core" />
-	<context:component-scan base-package="com.shouhuobao.guoer.service" />
-	<context:component-scan base-package="com.shouhuobao.wechat.service" />
+	<context:component-scan base-package="com.cms.service" />
 
 	<!-- production环境 -->
 	<context:property-placeholder ignore-unresolvable="true"
-		location="classpath*:/properties/#{systemProperties['env']}.properties" />
+		location="classpath*:/properties/#{systemProperties['env']}.properties,
+				  classpath*:/properties/common.properties" />
 	<bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
 		<property name="locations">
 			<list>
 				<value>classpath*:/properties/#{systemProperties['env']}.properties</value>
+				<value>classpath*:/properties/common.properties</value>
 			</list>
 		</property>
 	</bean>
@@ -41,13 +38,7 @@
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage"
 			value="com.shouhuobao.guoer.service.mapper,
-			com.shouhuobao.mapper,
-			com.shouhuobao.pay.mapper,
-			com.shouhuobao.release.mapper,
-			com.shouhuobao.ordersubmit.mapper,
-			com.shouhuobao.boxorder.mapper,
-			com.shouhuobao.ebill.mapper,
-			com.shouhuobao.parcelroute.mapper" />
+			com.cms.mapper" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 	</bean>
 
@@ -62,15 +53,16 @@
 	</bean>
 
 	<!-- 数据源配置(sqlSessionFactory, dataSource)以及事务处理(txManager,tx:annotation-driven) -->
-	<bean id="sqlSessionFactory" class="com.shouhuobao.app.SqlSessionFactoryBeanExt">
+	<bean id="sqlSessionFactory" class="com.shouhuobao.app.datasource.SqlSessionFactoryBeanExt">
 		<property name="dataSource" ref="dataSource" />
 		<property name="mapperLocations" value="classpath*:/mybatis/mapper/*.xml" />
 		<property name="configLocation" value="classpath:/mybatis/mybatis-config.xml" />
 	</bean>
-	<bean id="dataSource" class="com.shouhuobao.guoer.service.datasource.DynamicallyDataSource">
+	<bean id="dataSource" class="com.shouhuobao.app.datasource.DynamicallyDataSource">
 		<property name="targetDataSources">
 			<map key-type="java.lang.String">
 				<entry key="emove" value-ref="emove" />
+				<entry key="take" value-ref="take" />
 			</map>
 		</property>
 		<property name="defaultTargetDataSource" ref="emove" />
@@ -80,6 +72,14 @@
 	</bean>
 	<!-- 开启事务管理(基于注解的), 否则会导致@Transactional无效 -->
 	<tx:annotation-driven transaction-manager="txManager" />
+	<!-- 切换数据源 -->
+	<bean id="dataSourceAdvice" class="com.shouhuobao.app.datasource.DataSourceAdvice"/>
+     <!-- 配置事务切面 -->
+    <aop:config>
+         <aop:pointcut id="serviceOperation"
+                       expression="execution(* com.shouhuobao..*.*(..))"/>
+         <aop:advisor pointcut-ref="serviceOperation" advice-ref="dataSourceAdvice"/>
+    </aop:config>
 
 	<!-- 数据源配置, 使用 Druid 连接池 -->
 	<bean id="emove" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
@@ -87,6 +87,40 @@
 		<property name="url" value="${jdbc.url}" />
 		<property name="username" value="${jdbc.username}" />
 		<property name="password" value="${jdbc.password}" />
+		<property name="driverClassName" value="${jdbc.driver}" />
+
+		<!-- 配置初始化大小、最小、最大 -->
+		<property name="initialSize" value="10" />
+		<property name="minIdle" value="10" />
+		<property name="maxActive" value="100" />
+
+		<!-- 配置获取连接等待超时的时间 -->
+		<property name="maxWait" value="60000" />
+
+		<!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+		<property name="timeBetweenEvictionRunsMillis" value="60000" />
+
+		<!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+		<property name="minEvictableIdleTimeMillis" value="300000" />
+
+		<property name="validationQuery" value="SELECT 'x'" />
+		<property name="testWhileIdle" value="true" />
+		<property name="testOnBorrow" value="false" />
+		<property name="testOnReturn" value="false" />
+
+		<!-- 打开PSCache，并且指定每个连接上PSCache的大小 -->
+		<property name="poolPreparedStatements" value="false" />
+		<property name="maxPoolPreparedStatementPerConnectionSize" value="20" />
+
+		<!-- 配置监控统计拦截的filters -->
+		<!-- <property name="filters" value="stat,log4j" /> -->
+	</bean>
+
+	<bean id="take" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+		<!-- 基本属性 url、user、password -->
+		<property name="url" value="${take.jdbc.url}" />
+		<property name="username" value="${jdbc.jdbc.username}" />
+		<property name="password" value="${jdbc.jdbc.password}" />
 		<property name="driverClassName" value="${jdbc.driver}" />
 
 		<!-- 配置初始化大小、最小、最大 -->

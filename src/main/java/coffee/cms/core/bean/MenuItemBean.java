@@ -5,12 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 菜单
+ * 菜单项
  * 
- * @author coffee
+ * @author coffee<br>
+ * 		2017年6月23日上午9:59:23
  */
 @SuppressWarnings("serial")
-public class MenuItemBean implements Serializable{
+public class MenuItemBean implements Serializable {
 	private String id;
 	private String name;
 	private String url;

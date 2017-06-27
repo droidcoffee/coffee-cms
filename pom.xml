@@ -144,10 +144,10 @@
 				<configuration>
 					<scanIntervalSeconds>2000</scanIntervalSeconds>
 					<webAppConfig>
-						<contextPath>/admin</contextPath>
+						<contextPath>/</contextPath>
 					</webAppConfig>
 					<httpConnector>
-						<port>8082</port>
+						<port>81</port>
 					</httpConnector>
 				</configuration>
 			</plugin>

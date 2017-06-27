@@ -7,13 +7,12 @@
 
 	<!-- 注意 会先加载spring-mvc 所有controller -->
 	<context:component-scan base-package="com.shouhuobao.app" />
-	<context:component-scan base-package="com.shouhuobao.pay" />
-	<context:component-scan base-package="com.shouhuobao.wechat.controller" />
-	<context:component-scan base-package="com.shouhuobao.controller" />
+	<context:component-scan base-package="com.cms.controller" />
 
 	<mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/**" />
+			<mvc:exclude-mapping path="*.ico" />
 			<mvc:exclude-mapping path="/static/**" />
 			<bean class="com.shouhuobao.app.LogInterceptor"></bean>
 		</mvc:interceptor>
@@ -22,18 +21,4 @@
 	<!-- 容器默认的DefaultServletHandler处理 所有静态内容与无RequestMapping处理的URL -->
 	<mvc:default-servlet-handler />
 
-	<!-- 定义JSP文件的位置 -->
-	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/views/" />
-		<property name="suffix" value=".jsp" />
-	</bean>
-	<mvc:view-controller path="/electricsingle.jsp" view-name="electricsingle"/>
-	<!-- 将Controller抛出的异常转到特定View, 保持SiteMesh的装饰效果 -->
-	<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
-		<property name="exceptionMappings">
-			<props>
-				<prop key="java.lang.Throwable">error/500</prop>
-			</props>
-		</property>
-	</bean>
 </beans>

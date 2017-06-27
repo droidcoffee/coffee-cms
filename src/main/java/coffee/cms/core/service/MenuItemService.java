@@ -48,8 +48,7 @@ public class MenuItemService {
 		if (!"0".equals(valuesItem[3])) {
 			String[] children = valuesItem[3].split("-");
 			for (String childKey : children) {
-				MenuItemBean child = praser(res, childKey,
-						res.getString(childKey));
+				MenuItemBean child = praser(res, childKey, res.getString(childKey));
 				item.getChildren().add(child);
 			}
 		}
@@ -62,8 +61,7 @@ public class MenuItemService {
 	 */
 	public List<MenuItemBean> getMenuItems(HttpSession session) {
 
-		ResourceBundle res = ResourceBundle.getBundle(Config.CMS_MENU_PROPS,
-				Locale.getDefault());
+		ResourceBundle res = ResourceBundle.getBundle(Config.CMS_MENU_PROPS, Locale.getDefault());
 
 		List<MenuItemBean> menuItems = new ArrayList<MenuItemBean>();
 
@@ -76,12 +74,9 @@ public class MenuItemService {
 				continue;
 			}
 			String moduleId = key.substring(1);
-			UserBean user = (UserBean) session
-					.getAttribute(Constants.KEY_SESSION_USER);
-			//如果用户非admin(超级用户) 则检查权限
-			if (!"admin".equals(user.getUname())
-					&& !RoleUtils.hasPermission(user.getRole(),
-							Integer.valueOf(moduleId))) {
+			UserBean user = (UserBean) session.getAttribute(Constants.KEY_SESSION_USER);
+			// 如果用户非admin(超级用户) 则检查权限
+			if (!"admin".equals(user.getUname()) && !RoleUtils.hasPermission(user.getRole(), Integer.valueOf(moduleId))) {
 				continue;
 			}
 			// 非admin用户

@@ -1,0 +1,160 @@
+2017-06-23 14:24:58.862 [qtp1440057381-18] INFO  LogInterceptor - /user/getMenus
+2017-06-23 14:24:58.866 [qtp1440057381-18] INFO  LogInterceptor - 
+2017-06-23 14:25:12.040 [qtp1440057381-17] INFO  LogInterceptor - /user/getMenus
+2017-06-23 14:25:12.056 [qtp1440057381-17] INFO  LogInterceptor - userId=28&
+2017-06-23 16:48:02.402 [qtp1386207903-16] INFO  LogInterceptor - /user/getMenus
+2017-06-23 16:48:02.411 [qtp1386207903-16] INFO  LogInterceptor - userId=28&
+2017-06-23 16:51:06.469 [qtp1386207903-34] INFO  LogInterceptor - /user/getMenus
+2017-06-23 16:51:06.471 [qtp1386207903-34] INFO  LogInterceptor - userId=28&
+2017-06-23 16:51:11.065 [qtp1386207903-61] INFO  LogInterceptor - /user/getMenus
+2017-06-23 16:51:11.066 [qtp1386207903-61] INFO  LogInterceptor - userId=1&
+2017-06-23 16:53:51.466 [qtp1386207903-89] INFO  LogInterceptor - /user/getMenus
+2017-06-23 16:53:51.468 [qtp1386207903-89] INFO  LogInterceptor - userId=1&
+2017-06-23 16:54:02.070 [qtp1386207903-89] INFO  LogInterceptor - null
+2017-06-23 16:54:02.104 [qtp1386207903-89] INFO  LogInterceptor - /admin/index
+2017-06-23 16:54:02.104 [qtp1386207903-89] INFO  LogInterceptor - userId=1&
+2017-06-23 16:54:02.126 [qtp1386207903-89] INFO  LogInterceptor - null
+2017-06-23 16:54:02.706 [qtp1386207903-58] INFO  LogInterceptor - /favicon.ico
+2017-06-23 16:54:02.707 [qtp1386207903-58] INFO  LogInterceptor - 
+2017-06-23 16:54:02.711 [qtp1386207903-58] INFO  LogInterceptor - null
+2017-06-23 16:55:04.306 [qtp1386207903-59] INFO  LogInterceptor - /user/getMenus
+2017-06-23 16:55:04.312 [qtp1386207903-59] INFO  LogInterceptor - userId=1&
+2017-06-23 16:55:09.835 [qtp1386207903-59] INFO  LogInterceptor - null
+2017-06-23 16:55:12.037 [qtp1386207903-89] INFO  LogInterceptor - /res/css/theme.css
+2017-06-23 16:55:12.038 [qtp1386207903-16] INFO  LogInterceptor - /res/css/admin.css
+2017-06-23 16:55:12.039 [qtp1386207903-89] INFO  LogInterceptor - 
+2017-06-23 16:55:12.039 [qtp1386207903-16] INFO  LogInterceptor - 
+2017-06-23 16:55:12.053 [qtp1386207903-16] INFO  LogInterceptor - null
+2017-06-23 16:55:12.053 [qtp1386207903-89] INFO  LogInterceptor - null
+2017-06-23 16:55:12.066 [qtp1386207903-105] INFO  LogInterceptor - /res/img/admin/ltop.jpg
+2017-06-23 16:55:12.067 [qtp1386207903-105] INFO  LogInterceptor - 
+2017-06-23 16:55:12.071 [qtp1386207903-105] INFO  LogInterceptor - null
+2017-06-23 16:55:12.079 [qtp1386207903-90] INFO  LogInterceptor - /res/img/admin/bg.jpg
+2017-06-23 16:55:12.080 [qtp1386207903-90] INFO  LogInterceptor - 
+2017-06-23 16:55:12.085 [qtp1386207903-90] INFO  LogInterceptor - null
+2017-06-23 16:55:12.092 [qtp1386207903-89] INFO  LogInterceptor - /res/img/admin/ltitle.jpg
+2017-06-23 16:55:12.092 [qtp1386207903-90] INFO  LogInterceptor - /res/img/admin/login.jpg
+2017-06-23 16:55:12.092 [qtp1386207903-89] INFO  LogInterceptor - 
+2017-06-23 16:55:12.093 [qtp1386207903-90] INFO  LogInterceptor - 
+2017-06-23 16:55:12.095 [qtp1386207903-89] INFO  LogInterceptor - null
+2017-06-23 16:55:12.099 [qtp1386207903-89] INFO  LogInterceptor - /res/img/admin/llogo.jpg
+2017-06-23 16:55:12.099 [qtp1386207903-89] INFO  LogInterceptor - 
+2017-06-23 16:55:12.107 [qtp1386207903-16] INFO  LogInterceptor - /res/img/admin/line.jpg
+2017-06-23 16:55:12.107 [qtp1386207903-16] INFO  LogInterceptor - 
+2017-06-23 16:55:12.112 [qtp1386207903-89] INFO  LogInterceptor - null
+2017-06-23 16:55:12.115 [qtp1386207903-90] INFO  LogInterceptor - null
+2017-06-23 16:55:12.118 [qtp1386207903-90] INFO  LogInterceptor - /res/img/admin/reset.jpg
+2017-06-23 16:55:12.118 [qtp1386207903-90] INFO  LogInterceptor - 
+2017-06-23 16:55:12.121 [qtp1386207903-90] INFO  LogInterceptor - null
+2017-06-23 16:55:12.116 [qtp1386207903-16] INFO  LogInterceptor - null
+2017-06-23 16:55:16.735 [qtp1386207903-89] INFO  LogInterceptor - /res/common/css/jquery.validate.css
+2017-06-23 16:55:16.735 [qtp1386207903-89] INFO  LogInterceptor - 
+2017-06-23 16:55:16.738 [qtp1386207903-89] INFO  LogInterceptor - null
+2017-06-23 16:55:16.740 [qtp1386207903-89] INFO  LogInterceptor - /res/common/css/jquery.ui.css
+2017-06-23 16:55:16.740 [qtp1386207903-89] INFO  LogInterceptor - 
+2017-06-23 16:55:16.747 [qtp1386207903-89] INFO  LogInterceptor - null
+2017-06-23 16:55:16.750 [qtp1386207903-89] INFO  LogInterceptor - /res/common/css/jquery.treeview.css
+2017-06-23 16:55:16.750 [qtp1386207903-89] INFO  LogInterceptor - 
+2017-06-23 16:55:16.752 [qtp1386207903-89] INFO  LogInterceptor - null
+2017-06-23 16:55:16.754 [qtp1386207903-105] INFO  LogInterceptor - /thirdparty/My97DatePicker/WdatePicker.js
+2017-06-23 16:55:16.755 [qtp1386207903-105] INFO  LogInterceptor - 
+2017-06-23 16:55:16.755 [qtp1386207903-89] INFO  LogInterceptor - /res/common/js/jquery.js
+2017-06-23 16:55:16.755 [qtp1386207903-89] INFO  LogInterceptor - 
+2017-06-23 16:55:16.758 [qtp1386207903-105] INFO  LogInterceptor - null
+2017-06-23 16:55:16.759 [qtp1386207903-89] INFO  LogInterceptor - null
+2017-06-23 16:55:16.761 [qtp1386207903-105] INFO  LogInterceptor - /res/common/js/jquery.ext.js
+2017-06-23 16:55:16.761 [qtp1386207903-89] INFO  LogInterceptor - /thirdparty/fckeditor/fckeditor.js
+2017-06-23 16:55:16.761 [qtp1386207903-105] INFO  LogInterceptor - 
+2017-06-23 16:55:16.761 [qtp1386207903-89] INFO  LogInterceptor - 
+2017-06-23 16:55:16.764 [qtp1386207903-105] INFO  LogInterceptor - null
+2017-06-23 16:55:16.764 [qtp1386207903-89] INFO  LogInterceptor - null
+2017-06-23 16:55:16.774 [qtp1386207903-105] INFO  LogInterceptor - /res/common/js/pony.js
+2017-06-23 16:55:16.774 [qtp1386207903-105] INFO  LogInterceptor - 
+2017-06-23 16:55:16.778 [qtp1386207903-105] INFO  LogInterceptor - null
+2017-06-23 16:55:16.784 [qtp1386207903-106] INFO  LogInterceptor - /res/js/admin.js
+2017-06-23 16:55:16.785 [qtp1386207903-58] INFO  LogInterceptor - /res/img/admin/logo.png
+2017-06-23 16:55:16.785 [qtp1386207903-106] INFO  LogInterceptor - 
+2017-06-23 16:55:16.785 [qtp1386207903-58] INFO  LogInterceptor - 
+2017-06-23 16:55:16.790 [qtp1386207903-58] INFO  LogInterceptor - null
+2017-06-23 16:55:16.794 [qtp1386207903-59] INFO  LogInterceptor - /res/img/admin/welconlogin-icon.png
+2017-06-23 16:55:16.794 [qtp1386207903-59] INFO  LogInterceptor - 
+2017-06-23 16:55:16.796 [qtp1386207903-106] INFO  LogInterceptor - null
+2017-06-23 16:55:16.798 [qtp1386207903-59] INFO  LogInterceptor - null
+2017-06-23 16:55:16.807 [qtp1386207903-106] INFO  LogInterceptor - /res/img/admin/loginout-icon.png
+2017-06-23 16:55:16.807 [qtp1386207903-106] INFO  LogInterceptor - 
+2017-06-23 16:55:16.813 [qtp1386207903-106] INFO  LogInterceptor - null
+2017-06-23 16:55:17.085 [qtp1386207903-89] INFO  LogInterceptor - /thirdparty/My97DatePicker/skin/WdatePicker.css
+2017-06-23 16:55:17.086 [qtp1386207903-89] INFO  LogInterceptor - 
+2017-06-23 16:55:17.088 [qtp1386207903-89] INFO  LogInterceptor - null
+2017-06-23 16:55:17.374 [qtp1386207903-89] INFO  LogInterceptor - /res/img/admin/top-tbg.png
+2017-06-23 16:55:17.375 [qtp1386207903-89] INFO  LogInterceptor - 
+2017-06-23 16:55:17.379 [qtp1386207903-89] INFO  LogInterceptor - null
+2017-06-23 16:55:17.381 [qtp1386207903-89] INFO  LogInterceptor - /res/img/admin/navcurrbg.gif
+2017-06-23 16:55:17.381 [qtp1386207903-89] INFO  LogInterceptor - 
+2017-06-23 16:55:17.384 [qtp1386207903-89] INFO  LogInterceptor - null
+2017-06-23 16:55:17.387 [qtp1386207903-75] INFO  LogInterceptor - /res/img/admin/topbg.gif
+2017-06-23 16:55:17.387 [qtp1386207903-75] INFO  LogInterceptor - 
+2017-06-23 16:55:17.391 [qtp1386207903-75] INFO  LogInterceptor - null
+2017-06-23 16:55:17.393 [qtp1386207903-90] INFO  LogInterceptor - /res/img/admin/nav-left.png
+2017-06-23 16:55:17.415 [qtp1386207903-90] INFO  LogInterceptor - 
+2017-06-23 16:55:17.451 [qtp1386207903-90] INFO  LogInterceptor - null
+2017-06-23 16:55:17.452 [qtp1386207903-90] INFO  LogInterceptor - /res/img/admin/bg.png
+2017-06-23 16:55:17.453 [qtp1386207903-90] INFO  LogInterceptor - 
+2017-06-23 16:55:17.481 [qtp1386207903-90] INFO  LogInterceptor - null
+2017-06-23 16:55:17.792 [qtp1386207903-89] INFO  LogInterceptor - /thirdparty/My97DatePicker/My97DatePicker.html
+2017-06-23 16:55:17.792 [qtp1386207903-89] INFO  LogInterceptor - 
+2017-06-23 16:55:17.795 [qtp1386207903-89] INFO  LogInterceptor - null
+2017-06-23 16:55:17.899 [qtp1386207903-16] INFO  LogInterceptor - /res/img/admin/lbg.jpg
+2017-06-23 16:55:17.899 [qtp1386207903-16] INFO  LogInterceptor - 
+2017-06-23 16:55:17.906 [qtp1386207903-16] INFO  LogInterceptor - null
+2017-06-23 16:55:17.934 [qtp1386207903-90] INFO  LogInterceptor - /res/img/admin/icon.png
+2017-06-23 16:55:17.934 [qtp1386207903-90] INFO  LogInterceptor - 
+2017-06-23 16:55:17.936 [qtp1386207903-16] INFO  LogInterceptor - /res/common/img/treeview/treeview-default.gif
+2017-06-23 16:55:17.938 [qtp1386207903-90] INFO  LogInterceptor - null
+2017-06-23 16:55:17.938 [qtp1386207903-16] INFO  LogInterceptor - 
+2017-06-23 16:55:17.942 [qtp1386207903-16] INFO  LogInterceptor - null
+2017-06-23 16:55:17.949 [qtp1386207903-59] INFO  LogInterceptor - /res/common/img/treeview/folder.gif
+2017-06-23 16:55:17.950 [qtp1386207903-59] INFO  LogInterceptor - 
+2017-06-23 16:55:17.951 [qtp1386207903-75] INFO  LogInterceptor - /res/common/img/treeview/treeview-default-line.gif
+2017-06-23 16:55:17.951 [qtp1386207903-89] INFO  LogInterceptor - /res/common/img/treeview/folder-closed.gif
+2017-06-23 16:55:17.952 [qtp1386207903-75] INFO  LogInterceptor - 
+2017-06-23 16:55:17.952 [qtp1386207903-89] INFO  LogInterceptor - 
+2017-06-23 16:55:17.953 [qtp1386207903-59] INFO  LogInterceptor - null
+2017-06-23 16:55:17.955 [qtp1386207903-89] INFO  LogInterceptor - null
+2017-06-23 16:55:17.961 [qtp1386207903-75] INFO  LogInterceptor - null
+2017-06-23 16:55:18.013 [qtp1386207903-58] INFO  LogInterceptor - /thirdparty/My97DatePicker/config.js
+2017-06-23 16:55:18.013 [qtp1386207903-58] INFO  LogInterceptor - 
+2017-06-23 16:55:18.015 [qtp1386207903-58] INFO  LogInterceptor - null
+2017-06-23 16:55:18.016 [qtp1386207903-58] INFO  LogInterceptor - /thirdparty/My97DatePicker/calendar.js
+2017-06-23 16:55:18.016 [qtp1386207903-58] INFO  LogInterceptor - 
+2017-06-23 16:55:18.019 [qtp1386207903-58] INFO  LogInterceptor - null
+2017-06-23 16:55:18.039 [qtp1386207903-90] INFO  LogInterceptor - /thirdparty/My97DatePicker/lang/zh-cn.js
+2017-06-23 16:55:18.039 [qtp1386207903-90] INFO  LogInterceptor - 
+2017-06-23 16:55:18.042 [qtp1386207903-106] INFO  LogInterceptor - /thirdparty/My97DatePicker/skin/whyGreen/datepicker.css
+2017-06-23 16:55:18.042 [qtp1386207903-106] INFO  LogInterceptor - 
+2017-06-23 16:55:18.043 [qtp1386207903-90] INFO  LogInterceptor - null
+2017-06-23 16:55:18.043 [qtp1386207903-16] INFO  LogInterceptor - /thirdparty/My97DatePicker/skin/default/datepicker.css
+2017-06-23 16:55:18.043 [qtp1386207903-16] INFO  LogInterceptor - 
+2017-06-23 16:55:18.045 [qtp1386207903-106] INFO  LogInterceptor - null
+2017-06-23 16:55:18.050 [qtp1386207903-16] INFO  LogInterceptor - null
+2017-06-23 16:55:18.098 [qtp1386207903-90] INFO  LogInterceptor - /thirdparty/My97DatePicker/skin/default/img.gif
+2017-06-23 16:55:18.099 [qtp1386207903-90] INFO  LogInterceptor - 
+2017-06-23 16:55:18.104 [qtp1386207903-90] INFO  LogInterceptor - null
+2017-06-23 16:55:26.846 [qtp1386207903-89] INFO  LogInterceptor - /user/getMenus
+2017-06-23 16:55:26.846 [qtp1386207903-89] INFO  LogInterceptor - userId=28&
+2017-06-23 16:55:35.422 [qtp1386207903-89] INFO  LogInterceptor - null
+2017-06-23 16:55:57.298 [qtp1386207903-89] INFO  LogInterceptor - /res/common/img/treeview/file.gif
+2017-06-23 16:55:57.298 [qtp1386207903-89] INFO  LogInterceptor - 
+2017-06-23 16:55:57.314 [qtp1386207903-89] INFO  LogInterceptor - null
+2017-06-23 16:56:00.926 [qtp1386207903-58] INFO  LogInterceptor - /resource/img/spacer.gif
+2017-06-23 16:56:00.926 [qtp1386207903-58] INFO  LogInterceptor - 
+2017-06-23 16:56:00.932 [qtp1386207903-58] INFO  LogInterceptor - null
+2017-06-23 16:56:00.993 [qtp1386207903-89] INFO  LogInterceptor - /res/img/theme/button.png
+2017-06-23 16:56:00.993 [qtp1386207903-89] INFO  LogInterceptor - 
+2017-06-23 16:56:01.000 [qtp1386207903-89] INFO  LogInterceptor - null
+2017-06-23 16:56:01.004 [qtp1386207903-106] INFO  LogInterceptor - /res/img/theme/tit-tdbg.png
+2017-06-23 16:56:01.004 [qtp1386207903-106] INFO  LogInterceptor - 
+2017-06-23 16:56:01.008 [qtp1386207903-106] INFO  LogInterceptor - null
+2017-06-23 16:56:03.043 [qtp1386207903-89] INFO  LogInterceptor - /res/img/theme/theme-button.png
+2017-06-23 16:56:03.043 [qtp1386207903-89] INFO  LogInterceptor - 
+2017-06-23 16:56:03.048 [qtp1386207903-89] INFO  LogInterceptor - null
