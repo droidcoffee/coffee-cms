@@ -1,4 +1,4 @@
-package com.shouhuobao.app;
+package com;
 
 import javax.annotation.PostConstruct;
 

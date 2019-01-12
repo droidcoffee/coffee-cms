@@ -15,7 +15,7 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
 
-import com.qq.open.https.MyX509TrustManager;
+import com.util.https.MyX509TrustManager;
 
 public class SSLTrustManager implements X509TrustManager {
 	/*

@@ -1,4 +1,4 @@
-package com.qq.open.https;
+package com.util.https;
 
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;

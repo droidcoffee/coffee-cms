@@ -16,17 +16,17 @@
 
 	<description>Spring公共配置</description>
 
-	<context:component-scan base-package="com.shouhuobao.app" />
+	<context:component-scan base-package="com.shouhuobao" />
 	<context:component-scan base-package="com.cms.service" />
 
-	<!-- production环境 -->
+	<!-- production环境 #{systemProperties['env']} -->
 	<context:property-placeholder ignore-unresolvable="true"
-		location="classpath*:/properties/#{systemProperties['env']}.properties,
+		location="classpath*:/properties/application.test.properties,
 				  classpath*:/properties/common.properties" />
 	<bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
 		<property name="locations">
 			<list>
-				<value>classpath*:/properties/#{systemProperties['env']}.properties</value>
+				<value>classpath*:/properties/application.test.properties</value>
 				<value>classpath*:/properties/common.properties</value>
 			</list>
 		</property>
@@ -38,6 +38,7 @@
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage"
 			value="com.shouhuobao.guoer.service.mapper,
+			com.shouhuobao.mapper,
 			com.cms.mapper" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 	</bean>
@@ -53,7 +54,7 @@
 	</bean>
 
 	<!-- 数据源配置(sqlSessionFactory, dataSource)以及事务处理(txManager,tx:annotation-driven) -->
-	<bean id="sqlSessionFactory" class="com.shouhuobao.app.datasource.SqlSessionFactoryBeanExt">
+	<bean id="sqlSessionFactory" class="com.shouhuobao.app.SqlSessionFactoryBeanExt">
 		<property name="dataSource" ref="dataSource" />
 		<property name="mapperLocations" value="classpath*:/mybatis/mapper/*.xml" />
 		<property name="configLocation" value="classpath:/mybatis/mybatis-config.xml" />
@@ -62,7 +63,7 @@
 		<property name="targetDataSources">
 			<map key-type="java.lang.String">
 				<entry key="emove" value-ref="emove" />
-				<entry key="take" value-ref="take" />
+				<!-- <entry key="take" value-ref="take" /> -->
 			</map>
 		</property>
 		<property name="defaultTargetDataSource" ref="emove" />
@@ -116,25 +117,25 @@
 		<!-- <property name="filters" value="stat,log4j" /> -->
 	</bean>
 
-	<bean id="take" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
-		<!-- 基本属性 url、user、password -->
+	<!-- <bean id="take" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+		基本属性 url、user、password
 		<property name="url" value="${take.jdbc.url}" />
 		<property name="username" value="${jdbc.jdbc.username}" />
 		<property name="password" value="${jdbc.jdbc.password}" />
 		<property name="driverClassName" value="${jdbc.driver}" />
 
-		<!-- 配置初始化大小、最小、最大 -->
+		配置初始化大小、最小、最大
 		<property name="initialSize" value="10" />
 		<property name="minIdle" value="10" />
 		<property name="maxActive" value="100" />
 
-		<!-- 配置获取连接等待超时的时间 -->
+		配置获取连接等待超时的时间
 		<property name="maxWait" value="60000" />
 
-		<!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+		配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
 		<property name="timeBetweenEvictionRunsMillis" value="60000" />
 
-		<!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+		配置一个连接在池中最小生存的时间，单位是毫秒
 		<property name="minEvictableIdleTimeMillis" value="300000" />
 
 		<property name="validationQuery" value="SELECT 'x'" />
@@ -142,11 +143,11 @@
 		<property name="testOnBorrow" value="false" />
 		<property name="testOnReturn" value="false" />
 
-		<!-- 打开PSCache，并且指定每个连接上PSCache的大小 -->
+		打开PSCache，并且指定每个连接上PSCache的大小
 		<property name="poolPreparedStatements" value="false" />
 		<property name="maxPoolPreparedStatementPerConnectionSize" value="20" />
 
-		<!-- 配置监控统计拦截的filters -->
-		<!-- <property name="filters" value="stat,log4j" /> -->
-	</bean>
+		配置监控统计拦截的filters
+		<property name="filters" value="stat,log4j" />
+	</bean> -->
 </beans>
