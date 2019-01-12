@@ -17,35 +17,6 @@
 		<jetty.version>9.4.2.v20170220</jetty.version>
 	</properties>
 
-	<repositories>
-		<repository>
-			<id>nexus_public</id>
-			<name>nexus repository</name>
-			<url>http://60.205.149.41:8081/nexus/content/groups/public/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-			<layout>default</layout>
-		</repository>
-	</repositories>
-
-	<pluginRepositories>
-		<pluginRepository>
-			<id>nexus_public</id>
-			<name>nexus repository</name>
-			<url>http://60.205.149.41:8081/nexus/content/groups/public/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-			<layout>default</layout>
-		</pluginRepository>
-	</pluginRepositories>
 	<dependencies>
 		<dependency>
 			<groupId>com.shouhuobao</groupId>
@@ -72,24 +43,6 @@
 			<artifactId>druid</artifactId>
 			<version>${druid.version}</version>
 		</dependency>
-		<!-- 语音验证包 -->
-		<dependency>
-			<groupId>com.shouhuobao</groupId>
-			<artifactId>cloopen</artifactId>
-			<version>2.6</version>
-		</dependency>
-		<!-- poi -->
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi</artifactId>
-			<version>3.11</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-examples</artifactId>
-			<version>3.11</version>
-		</dependency>
-		<!-- poi 结束 -->
 	</dependencies>
 	<build>
 		<finalName>guoer-appserv</finalName>
@@ -148,14 +101,4 @@
 		</plugins>
 		<defaultGoal>compile</defaultGoal>
 	</build>
-	<distributionManagement>
-		<snapshotRepository>
-			<id>nexus-snapshots</id>
-			<url>http://60.205.149.41:8081/nexus/content/repositories/snapshots/</url>
-		</snapshotRepository>
-		<repository>
-			<id>nexus-releases</id>
-			<url>http://60.205.149.41:8081/nexus/content/repositories/releases/</url>
-		</repository>
-	</distributionManagement>
 </project>
